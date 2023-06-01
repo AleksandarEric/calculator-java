@@ -1,0 +1,72 @@
+Assignment - Testiranje
+
+Prilikom sistemskog testiranja kalkulatora, dolazimo do sledecih zapazanja:
+
+Input: 2+6
+Output: 8.0
+-Operacija sabiranja izvrsena uspesno, dobili smo ocekivani rezultat.
+
+Input: 7-4
+Output: 3.0
+-Operacija oduzimanja izvrsena uspesno, dobili smo ocekivani rezultat.
+
+Input: 6*3
+Output: 18.0
+-Operacija mnozenja izvrsena uspesno, dobili smo ocekivani rezultat.
+
+Input: 10/2
+Output: 5.0
+-Operacija deljenja izvrsena uspesno, dobili smo ocekivani rezultat.
+
+Testiranje osnovnih operacija je izvrsena i sa negativnim brojevima, decimalnim brojevima, kao i sa visecifrenim brojevima.
+U slucaju negativnih i decimalnih brojeva, kalkulator izbacuje ocekivane vrednosti, dok se kod jednakosti ciji bi rezultat trebalo da bude osmocifreni broj ili veci, dobijamo sledeci rezultat:
+Input: 9999999+1
+Output: 1.0E7
+
+Input: 0+0
+Output: 0.0
+
+Input: 0-0
+Output: 0.0
+
+Input: 0*0
+Output: 0.0
+
+Input: 0/0
+Output: NaN
+
+Input: 5/0
+Output: Infinity
+
+Input: 0/5
+Output: 0.0
+
+Testiranje osnovnih operacija sa nulom je dalo ocekivane rezultate, s tim sto smatram da treba razmotriti da li ce se deljenje nulom definisati kao Infinity ili Undefined result. 
+
+Input: (4+2)/3
+Output: Error
+-Koriscenje zagrada u izrazu daje kao rezultat ERROR. 
+
+Input: 7*2+9/3
+Output: 17.0
+-U slozenim izrazima sa vise operacija dobijaju se ocekivani rezultati, postuje se red racunskih operacija.
+
+Input: 1
+Output: Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+        at Calculator.Run(Calculator.java:24)
+        at Start.main(Start.java:19)
+-Ukoliko se unese samo jedan broj, bez zadate matematicke operacije, dobijamo navedeni izlaz.
+
+Input: 
+Output: Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+        at Calculator.Run(Calculator.java:24)
+        at Start.main(Start.java:19)
+-Ukoliko kao ulaz ne unese nista, dobijamo navedeni izlaz.
+
+-Nakon ukucavanja komande "exit" za izlazak iz programa, kalkulator ce i dalje izvrsavati racunske operacije. 
+Enter expression here (type 'exit' to quit):
+exit
+PS C:\Users\Eric> 4+1
+5
+
+
